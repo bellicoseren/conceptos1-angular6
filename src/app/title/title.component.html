@@ -1,0 +1,34 @@
+<ng-content selelct="p"></ng-content>
+<h1>Curso de Angular desde URL</h1>
+{{ name }}
+<br />
+valor numérico: {{ valorNumerico }}
+<br />
+Modificador de acceso: {{valorPrivado}}
+<br />
+<label *ngFor="let edad of edades">Edad {{ edad }}<br /></label>
+<br />
+{{getNombreEdad()}}
+<!--<ng-content></ng-content> -->
+<ng-content select="div"></ng-content>
+<br />
+<label>Binding en una sola vía</label>
+{{ name }}
+<br />
+Property Bindding
+<br />
+<button [disabled]="!isAvailable" [class.active]="isAvailable" type="button" value="button">Presionar</button>
+<br />
+Property Bindding con ngClass
+<br />
+Hay tres formas de usar ngClass: 
+<ul>
+    <li>Usando un String. Clases separadas por espacios:    [ngClass]="'active back red'"</li>
+    <li>Usando un arreglo. [ngClass]="['active', 'shadow']"</li>
+    <li>Usando una propiedad del componente declarada en component.ts [ngClass]="css_classes"</li>
+    <li>Usando un objeto de configuración  [ngClass]="<active: !isAvailable, shadow: !isAvailable>"</li>
+    <li>En lugar de < y >son llaves</li>
+    <li>En el caso de configuración las claves son las clases y los valores una expresion booleana</li>
+    <li>Si la expresion booleana es true se aplica, si es false, no.</li>
+</ul>
+<button [disabled]="!isAvailable" [ngClass]="{active: isAvailable, shadow: !isAvailable}">ngClass</button >
