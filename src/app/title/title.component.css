@@ -11,10 +11,14 @@
     color: black;
 }
 
-.highligth{
+.highlight{
     background-color: rgb(200,50,50);
     border-radius: 4px;
     padding: 10px;
+    color: white;
+    font-size: 12px;
+    margin-bottom: 1em;
+    display: inline-block;
 }
 
 button{
