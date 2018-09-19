@@ -32,3 +32,14 @@ Hay tres formas de usar ngClass:
     <li>Si la expresion booleana es true se aplica, si es false, no.</li>
 </ul>
 <button [disabled]="!isAvailable" [ngClass]="{active: isAvailable, shadow: !isAvailable}">ngClass</button >
+<br />
+<p>En el caso de else dentro de *ngIf="" se debe poner ; else y la etiqueta que tiene el ng-template</p>
+
+<br />
+<p *ngIf="!isAvailable; else "available>** ngIf **  Lanzamiento: 25 Dic 2018</p>
+<ng-template #available>
+    <span class="highlight">Curso disponible</span>
+</ng-template>
+<div>
+    <button [disabled]="!isAvailable" [ngClass]="{active: isAvailable, shadow: !isAvailable}" type="button" name="button">ngIf</button>
+</div>
